@@ -76,35 +76,4 @@ python3 factor_model.py
 
 ---
 
-## What I Learned / 学到了什么
 
-- **Log returns are additive** — simple returns are not, making cumulative calculations cleaner.
-  **对数收益率可加** — 普通收益率不行，这让累计收益的计算更简洁。
-
-- **The √T rule** — annualizing volatility uses √252 instead of 252, because variance (not std) is additive under IID.
-  **√T法则** — 年化波动率用√252而不是252，因为在IID假设下可加的是方差而不是标准差。
-
-- **Cross-sectional z-score** — necessary before combining factors with different scales into one composite signal.
-  **截面z-score标准化** — 在将不同量纲的因子合成一个综合信号之前必须做标准化。
-
-- **Rank IC (Spearman)** — more robust than Pearson IC for evaluating factor predictiveness, because it is not affected by outliers.
-  **Rank IC (Spearman)** — 比Pearson IC更稳健，因为不受极端值影响。
-
-- **Parameter sensitivity** — the optimal momentum lookback window is unstable across different periods, highlighting overfitting risk.
-  **参数敏感性** — 动量因子的最优回看窗口在不同时段不稳定，说明存在过拟合风险。
-
----
-
-## Next Steps / 下一步计划
-
-- Optimize factor weights using ridge regression instead of equal weighting (Project 02)
-  使用岭回归优化因子权重，取代等权组合（Project 02）
-
-- Add out-of-sample validation to guard against overfitting
-  加入样本外验证防止过拟合
-
-- Expand the stock universe beyond 20 names for more robust results
-  扩大股票池至20只以上，使结果更稳健
-
-- Explore dynamic lookback windows that adapt to market regime
-  探索根据市场状态动态调整的回看窗口
